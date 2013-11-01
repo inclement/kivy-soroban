@@ -1,0 +1,21 @@
+<BeadSlider>:
+    position_dist: self.height / float(self.positions)
+    canvas:
+        Color:
+            rgba: 0, 1, 0, 1
+        Rectangle:
+            pos: self.pos[0] + 0.45*self.width, self.pos[1]
+            size: 0.1*self.width, self.height
+        
+<Bead>:
+    canvas:
+        Color:
+            rgba: 1, 0, 0, 1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: 0, 0, 1, 1
+        Line:
+            width: 2
+            ellipse: self.pos[0], self.pos[1], self.size[0], self.size[1]
